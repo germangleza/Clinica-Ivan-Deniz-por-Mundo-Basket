@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clínica Ivan Deniz · 29 Aniversario Mundo Basket</title>
+<title>Clínica Iván Déniz · 29 Aniversario Mundo Basket</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -582,6 +582,78 @@
     color: var(--ink-soft);
   }
 
+  /* ─── FECHAS ─── */
+  .fechas {
+    padding: 80px 80px;
+    border-top: 1px solid rgba(245,240,232,0.06);
+  }
+
+  .fechas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 40px;
+  }
+
+  .fecha-card {
+    padding: 40px 36px;
+    border: 1px solid rgba(245,240,232,0.07);
+    background: rgba(245,240,232,0.02);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .fecha-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 2px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .fecha-card:hover::after { transform: scaleX(1); }
+  .fecha-card:hover { background: rgba(232,93,36,0.05); }
+
+  .fecha-dia {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--orange);
+    opacity: 0.25;
+    margin-bottom: 12px;
+  }
+
+  .fecha-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+
+  .fecha-nombre {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 12px;
+  }
+
+  .fecha-desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 900px) {
+    .fechas { padding: 80px 32px; }
+    .fechas-grid { grid-template-columns: 1fr; }
+  }
+
   /* ─── VIDEO EMBED ─── */
   .video-section {
     padding: 0 80px 100px;
@@ -839,7 +911,7 @@
   <div class="hero-left">
     <div class="aniversario-badge">
       <div class="line"></div>
-      <span>29 Aniversario Mundo Basket · Chiapas</span>
+      <span>17, 18 y 19 de Abril · 29 Aniversario Mundo Basket · Chiapas</span>
     </div>
 
     <p class="hero-eyebrow">Clínica para Entrenadores de Basketball</p>
@@ -847,11 +919,13 @@
     <h1 class="hero-title">
       <span class="highlight">Aprende del</span>
       MEJOR
-      <span class="name">Ivan Deniz</span>
+      <span class="name">Iván Déniz</span>
     </h1>
 
     <p class="hero-subtitle">
       El coach de <strong>Astros de Jalisco</strong>, líder de CIBACOPA y participante en Champions Américas, trae su metodología de campeonato directamente a Chiapas. <strong>Evento gratuito · Solo por invitación.</strong>
+      <br><br>
+      <strong>17, 18 y 19 de abril · Chiapas</strong>
     </p>
 
     <div class="cta-group">
@@ -874,6 +948,11 @@
     </div>
 
     <div class="stats-stack">
+      <div class="stat-card">
+        <div class="stat-label">Fechas del evento</div>
+        <div class="stat-value">Abr 17–19</div>
+        <div class="stat-desc">Tres días · Chiapas</div>
+      </div>
       <div class="stat-card">
         <div class="stat-label">Posición actual</div>
         <div class="stat-value">Líder</div>
@@ -901,7 +980,7 @@
 <!-- ─── TICKER ─── -->
 <div class="ticker">
   <div class="ticker-inner">
-    CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> EVENTO GRATUITO <span>·</span> SOLO POR INVITACIÓN <span>·</span> ALUMNOS MUNDO BASKET EN CANCHA <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span> CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> EVENTO GRATUITO <span>·</span> SOLO POR INVITACIÓN <span>·</span> ALUMNOS MUNDO BASKET EN CANCHA <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span>
+    CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> 17, 18 Y 19 DE ABRIL <span>·</span> EVENTO GRATUITO <span>·</span> SOLO POR INVITACIÓN <span>·</span> ALUMNOS MUNDO BASKET EN CANCHA <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span> CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> 17, 18 Y 19 DE ABRIL <span>·</span> EVENTO GRATUITO <span>·</span> SOLO POR INVITACIÓN <span>·</span> ALUMNOS MUNDO BASKET EN CANCHA <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span>
   </div>
 </div>
 
@@ -915,9 +994,9 @@
       <em>ganando hoy.</em>
     </h2>
     <div class="about-body">
-      <p>Ivan Deniz no es un ex-entrenador que da clínicas. Es el coach que hoy dirige al equipo líder del basquetbol profesional en México, que compite en el escenario internacional más exigente del continente.</p>
+      <p>Iván Déniz no es un ex-entrenador que da clínicas. Es el coach que hoy dirige al equipo líder del basquetbol profesional en México, que compite en el escenario internacional más exigente del continente.</p>
       <p>Lo que aprenderás en esta clínica no viene de libros ni de teoría: viene de la pizarra que ganó partidos <strong>esta misma temporada</strong>.</p>
-      <p>Mundo Basket cumple 29 años, y para celebrarlo eligió traer al mejor.</p>
+      <p>Mundo Basket cumple 29 años, y para celebrarlo eligió traer al mejor. Eso no es casualidad — es un criterio que se ha construido en casi tres décadas.</p>
     </div>
   </div>
 
@@ -960,6 +1039,34 @@
   </div>
 </section>
 
+<!-- ─── FECHAS ─── -->
+<section class="fechas">
+  <div class="reveal">
+    <p class="section-label">Cuándo</p>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,72px);line-height:0.95;color:var(--cream);">Tres días. <span style="color:var(--orange);">Abril 2025.</span></h2>
+  </div>
+  <div class="fechas-grid">
+    <div class="fecha-card reveal">
+      <div class="fecha-dia">17</div>
+      <div class="fecha-label">Jueves · Día 1</div>
+      <div class="fecha-nombre">Apertura</div>
+      <div class="fecha-desc">Bienvenida e introducción al sistema. Iván Déniz presenta los fundamentos filosóficos y técnicos que rigen a Astros de Jalisco.</div>
+    </div>
+    <div class="fecha-card reveal" style="transition-delay:0.1s">
+      <div class="fecha-dia">18</div>
+      <div class="fecha-label">Viernes · Día 2</div>
+      <div class="fecha-nombre">Trabajo en cancha</div>
+      <div class="fecha-desc">Sesión práctica completa con alumnos de Mundo Basket. Ejercicios, sistemas y correcciones en tiempo real frente a los coaches asistentes.</div>
+    </div>
+    <div class="fecha-card reveal" style="transition-delay:0.2s">
+      <div class="fecha-dia">19</div>
+      <div class="fecha-label">Sábado · Día 3</div>
+      <div class="fecha-nombre">Cierre y preguntas</div>
+      <div class="fecha-desc">Sesión abierta de preguntas directas. Cada coach lleva sus casos reales. Iván Déniz responde sin filtros desde su experiencia de campeonato.</div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── PILLARS ─── -->
 <section class="pillars" id="pilares">
   <div class="pillars-header reveal">
@@ -971,17 +1078,17 @@
     <div class="pillar reveal">
       <div class="pillar-number">01</div>
       <h3 class="pillar-title">Vigencia real</h3>
-      <p class="pillar-body">Cada concepto que comparterá está validado en la cancha profesional en tiempo real. Eso no tiene equivalente en ningún otro evento de formación en México.</p>
+      <p class="pillar-body">Iván Déniz no da clínicas entre temporadas. Las da mientras gana. Cada concepto que comparterá está validado en la cancha profesional en tiempo real. Eso no tiene equivalente en ningún otro evento de formación en México.</p>
     </div>
     <div class="pillar reveal" style="transition-delay: 0.1s">
       <div class="pillar-number">02</div>
       <h3 class="pillar-title">Acceso exclusivo</h3>
-      <p class="pillar-body">La metodología de un equipo que compite en Champions Américas trasladado a categorías inferiores, disponible solo aquí, solo en este momento. No existe otra manera de acceder a este nivel de conocimiento en la región.</p>
+      <p class="pillar-body">La metodología de un equipo que compite en Champions Américas, disponible solo aquí, solo en Chiapas, solo en este momento. No existe otra manera de acceder a este nivel de conocimiento en la región.</p>
     </div>
     <div class="pillar reveal" style="transition-delay: 0.2s">
       <div class="pillar-number">03</div>
       <h3 class="pillar-title">Legado vivo</h3>
-      <p class="pillar-body">Mundo Basket lleva 29 años formando el juego en Chiapas. Esta clínica es una declaración ambiciosa de su historia: no celebramos el pasado, invertimos en el futuro del basquetbol en Chiapas.</p>
+      <p class="pillar-body">Mundo Basket lleva 29 años formando el juego en Chiapas. Esta clínica es la declaración más ambiciosa de su historia: no celebramos el pasado, invertimos en el futuro de cada entrenador que esté en esta sala.</p>
     </div>
   </div>
 </section>
@@ -991,7 +1098,7 @@
   <div class="video-wrapper reveal">
     <iframe
       src="https://www.youtube.com/embed/jwksvm8MSDY"
-      title="Clínica Ivan Deniz · 29 Aniversario Mundo Basket"
+      title="Clínica Iván Déniz · 29 Aniversario Mundo Basket"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
     </iframe>
@@ -1007,7 +1114,7 @@
       29 años esperando<br>este momento.
     </h2>
     <p class="anniversary-body">
-      Dos décadas y media de construir basquetbol en Chiapas merecen una celebración a la altura. <strong>El mejor coach activo del país</strong>, compartiendo su sistema con los entrenadores que van a moldear la siguiente generación de jugadores chiapanecos.
+      Dos décadas y media de construir basquetbol en Chiapas merecen una celebración a la altura. No un torneo de aniversario. No una cena. <strong>El mejor coach activo del país</strong>, compartiendo su sistema con los entrenadores que van a moldear la siguiente generación de jugadores chiapanecos.
       <br><br>
       Ese es el legado de 29 años.
     </p>
@@ -1024,7 +1131,7 @@
         <span>Eres el equipo.</span>
       </h2>
       <p class="alumnos-body">
-        Los alumnos de Mundo Basket son los protagonistas de esta clínica. Serán los jugadores que Ivan Deniz dirija, corrija y entrene en cancha frente a los coaches invitados.
+        Los alumnos de Mundo Basket son los protagonistas de esta clínica. Serán los jugadores que Iván Déniz dirija, corrija y entrene en cancha frente a los coaches invitados.
         <br><br>
         Eso no es un papel secundario. Es <strong>la mejor formación que un jugador joven puede recibir</strong>: ser entrenado, en vivo, por el mejor coach activo de México.
       </p>
@@ -1032,8 +1139,8 @@
 
     <div class="alumnos-right reveal">
       <div class="alumno-benefit">
-        <div class="alumno-benefit-title">Entrenamiento directo con Ivan Deniz</div>
-        <div class="alumno-benefit-body">No verás la clínica desde las gradas. Ivan Deniz te dará indicaciones, te corregirá y trabajará contigo en cancha. Eso no tiene precio.</div>
+        <div class="alumno-benefit-title">Entrenamiento directo con Iván Déniz</div>
+        <div class="alumno-benefit-body">No verás la clínica desde las gradas. Iván Déniz te dará indicaciones, te corregirá y trabajará contigo en cancha. Eso no tiene precio.</div>
       </div>
       <div class="alumno-benefit">
         <div class="alumno-benefit-title">Aprende como aprenden los profesionales</div>
@@ -1045,13 +1152,14 @@
       </div>
       <div class="alumno-benefit">
         <div class="alumno-benefit-title">Parte de la historia de Mundo Basket</div>
-        <div class="alumno-benefit-body">El 29 aniversario se recordará por esta clínica. Y tú estarás adentro cuando eso suceda.</div>
+        <div class="alumno-benefit-body">El 29 aniversario se recordará por esta clínica. Y tú estarás adentro — no afuera — cuando eso suceda.</div>
       </div>
 
       <div class="alumnos-cta">
         <div class="alumnos-cta-text">
-          ¿Eres alumno de MB? <strong>Tendrás la oportunidad de participar</strong><br>
-          </div>
+          ¿Eres alumno de MB? <strong>Tu participación está confirmada.</strong><br>
+          Habla con tu entrenador para los detalles del día.
+        </div>
       </div>
     </div>
   </div>
@@ -1085,7 +1193,7 @@
       <div class="prog-num">03</div>
       <div class="prog-content">
         <div class="prog-title">Gestión del equipo y liderazgo</div>
-        <div class="prog-body">El rol del coach dentro y fuera de la cancha. Cómo Ivan Deniz construye cultura, maneja presión y toma decisiones en momentos clave de campeonato.</div>
+        <div class="prog-body">El rol del coach dentro y fuera de la cancha. Cómo Iván Déniz construye cultura, maneja presión y toma decisiones en momentos clave de campeonato.</div>
       </div>
     </div>
     <div class="program-item reveal" style="transition-delay:0.15s">
@@ -1099,7 +1207,7 @@
       <div class="prog-num">05</div>
       <div class="prog-content">
         <div class="prog-title">Preparación y análisis de partido</div>
-        <div class="prog-body">El proceso de Ivan Deniz para preparar un juego: scouting, pizarra, ajustes en tiempo real. El detrás del telón de un staff de competencia internacional.</div>
+        <div class="prog-body">El proceso de Iván Déniz para preparar un juego: scouting, pizarra, ajustes en tiempo real. El detrás del telón de un staff de competencia internacional.</div>
       </div>
     </div>
     <div class="program-item reveal" style="transition-delay:0.2s">
@@ -1114,20 +1222,20 @@
 
 <!-- ─── CTA FINAL ─── -->
 <section class="cta-section" id="registro">
-  <p class="cta-eyebrow reveal">Evento gratuito · Solo por invitación</p>
+  <p class="cta-eyebrow reveal">17, 18 y 19 de Abril · Evento gratuito · Solo por invitación</p>
   <h2 class="cta-headline reveal">
     <span>El mejor</span><br>coach de México.<br>Tu ciudad.
   </h2>
   <p class="cta-sub reveal">
     Sin costo. Sin venta abierta. El acceso es por invitación directa de Mundo Basket. <strong>Si recibes una invitación, no la dejes pasar.</strong>
   </p>
-  <a href="#alumnos" class="btn-large reveal">No te lo puedes perder</a>
+  <a href="#alumnos" class="btn-large reveal">¿Eres alumno de MB? Entra aquí</a>
 </section>
 
 <!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-brand">Mundo <span>Basket</span> · Chiapas</div>
-  <div class="footer-right">29 Aniversario · Clínica Ivan Deniz</div>
+  <div class="footer-right">29 Aniversario · Clínica Iván Déniz</div>
 </footer>
 
 <script>
