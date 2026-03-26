@@ -582,6 +582,115 @@
     color: var(--ink-soft);
   }
 
+  /* ─── VIDEO EMBED ─── */
+  .video-section {
+    padding: 0 80px 100px;
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border: 1px solid rgba(232,93,36,0.2);
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  @media (max-width: 900px) {
+    .video-section { padding: 0 32px 80px; }
+  }
+
+  /* ─── ALUMNOS MB ─── */
+  .alumnos {
+    padding: 100px 80px;
+    background: rgba(232,93,36,0.05);
+    border-top: 1px solid rgba(232,93,36,0.15);
+    border-bottom: 1px solid rgba(232,93,36,0.15);
+  }
+
+  .alumnos-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .alumnos-left {}
+
+  .alumnos-headline {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(52px, 7vw, 88px);
+    line-height: 0.92;
+    color: var(--cream);
+    margin-bottom: 24px;
+  }
+
+  .alumnos-headline span { color: var(--orange); }
+
+  .alumnos-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    max-width: 440px;
+  }
+
+  .alumnos-body strong { color: var(--cream); font-weight: 400; }
+
+  .alumnos-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .alumno-benefit {
+    padding: 24px 28px;
+    border: 1px solid rgba(232,93,36,0.2);
+    border-left: 3px solid var(--orange);
+    background: rgba(232,93,36,0.04);
+    transition: background 0.2s;
+  }
+
+  .alumno-benefit:hover { background: rgba(232,93,36,0.1); }
+
+  .alumno-benefit-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 6px;
+  }
+
+  .alumno-benefit-body {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+
+  .alumnos-cta {
+    margin-top: 36px;
+    padding: 20px 28px;
+    border: 1px solid var(--orange);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .alumnos-cta-text {
+    font-size: 14px;
+    color: var(--cream);
+    line-height: 1.5;
+  }
+
+  .alumnos-cta-text strong { color: var(--orange); font-weight: 500; }
+
   /* ─── CTA FINAL ─── */
   .cta-section {
     padding: 120px 80px;
@@ -711,7 +820,9 @@
     .pillars-grid { grid-template-columns: 1fr; }
     .anniversary { grid-template-columns: 1fr; padding: 80px 32px; gap: 24px; }
     .big-number { font-size: 100px; }
-    .program { padding: 80px 32px; }
+    .alumnos { padding: 80px 32px; }
+    .alumnos-inner { grid-template-columns: 1fr; gap: 48px; }
+    
     .program-grid { grid-template-columns: 1fr; }
     .program-header { flex-direction: column; align-items: flex-start; }
     .cta-section { padding: 80px 32px; }
@@ -740,11 +851,11 @@
     </h1>
 
     <p class="hero-subtitle">
-      El coach de <strong>Astros de Jalisco</strong>, líder de CIBACOPA y participante en Champions Américas, trae su metodología de campeonato directamente a Chiapas.
+      El coach de <strong>Astros de Jalisco</strong>, líder de CIBACOPA y participante en Champions Américas, trae su metodología de campeonato directamente a Chiapas. <strong>Evento gratuito · Solo por invitación.</strong>
     </p>
 
     <div class="cta-group">
-      <a href="#registro" class="btn-primary">Reserva tu lugar</a>
+      <a href="#alumnos" class="btn-primary">¿Eres alumno de MB?</a>
       <a href="#programa" class="btn-ghost">Ver programa</a>
     </div>
   </div>
@@ -775,14 +886,14 @@
         <div class="stat-desc">Americas Basketball — Astros de Jalisco</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Reconocimiento</div>
-        <div class="stat-value">El #1</div>
-        <div class="stat-desc">Mejor coach del basquetbol mexicano</div>
+        <div class="stat-label">Costo de inscripción</div>
+        <div class="stat-value">Gratis</div>
+        <div class="stat-desc">Solo por invitación — aforo limitado</div>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Aniversario</div>
-        <div class="stat-value">29 años</div>
-        <div class="stat-desc">Mundo Basket · Chiapas</div>
+        <div class="stat-label">Protagonistas en cancha</div>
+        <div class="stat-value">Alumnos MB</div>
+        <div class="stat-desc">Los jugadores de Mundo Basket, en acción</div>
       </div>
     </div>
   </div>
@@ -791,7 +902,7 @@
 <!-- ─── TICKER ─── -->
 <div class="ticker">
   <div class="ticker-inner">
-    CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> MUNDO BASKET CHIAPAS <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span> CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> MUNDO BASKET CHIAPAS <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span>
+    CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> EVENTO GRATUITO <span>·</span> SOLO POR INVITACIÓN <span>·</span> ALUMNOS MUNDO BASKET EN CANCHA <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span> CAMPEONES DE CIBACOPA <span>·</span> CHAMPIONS AMÉRICAS <span>·</span> IVAN DENIZ <span>·</span> EVENTO GRATUITO <span>·</span> SOLO POR INVITACIÓN <span>·</span> ALUMNOS MUNDO BASKET EN CANCHA <span>·</span> 29 ANIVERSARIO <span>·</span> METODOLOGÍA DE ÉLITE <span>·</span>
   </div>
 </div>
 
@@ -834,6 +945,13 @@
       </div>
     </div>
     <div class="credential">
+      <div class="cred-icon">🎟️</div>
+      <div class="cred-text">
+        <div class="cred-title">Gratuito · Solo por invitación</div>
+        <div class="cred-sub">Sin costo. Sin venta abierta. El acceso es una distinción, no una transacción.</div>
+      </div>
+    </div>
+    <div class="credential">
       <div class="cred-icon">📍</div>
       <div class="cred-text">
         <div class="cred-title">Por primera vez en Chiapas</div>
@@ -869,6 +987,18 @@
   </div>
 </section>
 
+<!-- ─── VIDEO ─── -->
+<section class="video-section">
+  <div class="video-wrapper reveal">
+    <iframe
+      src="https://www.youtube.com/embed/jwksvm8MSDY"
+      title="Clínica Ivan Deniz · 29 Aniversario Mundo Basket"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
 <!-- ─── 29 AÑOS ─── -->
 <section class="anniversary">
   <div class="big-number reveal">29</div>
@@ -882,6 +1012,50 @@
       <br><br>
       Ese es el legado de 29 años.
     </p>
+  </div>
+</section>
+
+<!-- ─── ALUMNOS MB ─── -->
+<section class="alumnos" id="alumnos">
+  <div class="alumnos-inner">
+    <div class="alumnos-left reveal">
+      <p class="section-label">Para los alumnos de Mundo Basket</p>
+      <h2 class="alumnos-headline">
+        Tú no eres<br>el público.<br>
+        <span>Eres el equipo.</span>
+      </h2>
+      <p class="alumnos-body">
+        Los alumnos de Mundo Basket son los protagonistas de esta clínica. Serán los jugadores que Ivan Deniz dirija, corrija y entrene en cancha frente a los coaches invitados.
+        <br><br>
+        Eso no es un papel secundario. Es <strong>la mejor formación que un jugador joven puede recibir</strong>: ser entrenado, en vivo, por el mejor coach activo de México.
+      </p>
+    </div>
+
+    <div class="alumnos-right reveal">
+      <div class="alumno-benefit">
+        <div class="alumno-benefit-title">Entrenamiento directo con Ivan Deniz</div>
+        <div class="alumno-benefit-body">No verás la clínica desde las gradas. Ivan Deniz te dará indicaciones, te corregirá y trabajará contigo en cancha. Eso no tiene precio.</div>
+      </div>
+      <div class="alumno-benefit">
+        <div class="alumno-benefit-title">Aprende como aprenden los profesionales</div>
+        <div class="alumno-benefit-body">Los ejercicios, sistemas y conceptos que ejecutarás son los mismos que usa Astros de Jalisco hoy en la CIBACOPA y en Champions Américas.</div>
+      </div>
+      <div class="alumno-benefit">
+        <div class="alumno-benefit-title">Visibilidad frente a coaches de toda la región</div>
+        <div class="alumno-benefit-body">Los entrenadores invitados vendrán de distintas partes de Chiapas y el sureste. Te verán jugar. Te evaluarán. Ese networking no se consigue en ningún otro contexto.</div>
+      </div>
+      <div class="alumno-benefit">
+        <div class="alumno-benefit-title">Parte de la historia de Mundo Basket</div>
+        <div class="alumno-benefit-body">El 29 aniversario se recordará por esta clínica. Y tú estarás adentro — no afuera — cuando eso suceda.</div>
+      </div>
+
+      <div class="alumnos-cta">
+        <div class="alumnos-cta-text">
+          ¿Eres alumno de MB? <strong>Tu participación está confirmada.</strong><br>
+          Habla con tu entrenador para los detalles del día.
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -942,14 +1116,14 @@
 
 <!-- ─── CTA FINAL ─── -->
 <section class="cta-section" id="registro">
-  <p class="cta-eyebrow reveal">Plazas limitadas</p>
+  <p class="cta-eyebrow reveal">Evento gratuito · Solo por invitación</p>
   <h2 class="cta-headline reveal">
     <span>El mejor</span><br>coach de México.<br>Tu ciudad.
   </h2>
   <p class="cta-sub reveal">
-    Esta clínica no se repite. <strong>No hay segunda oportunidad</strong> de aprender del coach líder de la CIBACOPA mientras todavía está ganando.
+    Sin costo. Sin venta abierta. El acceso es por invitación directa de Mundo Basket. <strong>Si recibes una invitación, no la dejes pasar.</strong>
   </p>
-  <a href="#" class="btn-large reveal">Reserva tu lugar ahora</a>
+  <a href="#alumnos" class="btn-large reveal">¿Eres alumno de MB? Entra aquí</a>
 </section>
 
 <!-- ─── FOOTER ─── -->
