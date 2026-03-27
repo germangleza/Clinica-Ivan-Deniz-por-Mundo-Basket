@@ -763,6 +763,145 @@
 
   .alumnos-cta-text strong { color: var(--orange); font-weight: 500; }
 
+  /* ─── SOLICITUD ─── */
+  .solicitud {
+    padding: 100px 80px;
+    border-top: 1px solid rgba(245,240,232,0.06);
+  }
+
+  .solicitud-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+  }
+
+  .solicitud-left {}
+
+  .solicitud-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    line-height: 1.2;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+
+  .solicitud-headline em {
+    color: var(--orange);
+    font-style: normal;
+  }
+
+  .solicitud-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+  }
+
+  .solicitud-body strong {
+    color: var(--cream);
+    font-weight: 400;
+  }
+
+  .solicitud-nota {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    padding: 16px 20px;
+    border-left: 2px solid rgba(232,93,36,0.3);
+    opacity: 0.8;
+  }
+
+  .solicitud-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--orange);
+  }
+
+  .form-input {
+    background: rgba(245,240,232,0.04);
+    border: 1px solid rgba(245,240,232,0.1);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 14px 18px;
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+  .form-input::placeholder { color: var(--ink-soft); }
+
+  .form-input:focus {
+    border-color: var(--orange);
+    background: rgba(232,93,36,0.05);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-submit {
+    background: var(--orange);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    align-self: flex-start;
+  }
+
+  .form-submit:hover {
+    background: var(--orange-light);
+    transform: translateY(-2px);
+  }
+
+  .form-disclaimer {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-top: 4px;
+  }
+
+  .form-success {
+    display: none;
+    padding: 24px;
+    border: 1px solid rgba(232,93,36,0.3);
+    background: rgba(232,93,36,0.06);
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--cream);
+  }
+
+  @media (max-width: 900px) {
+    .solicitud { padding: 80px 32px; }
+    .solicitud-inner { grid-template-columns: 1fr; gap: 48px; }
+    .form-submit { width: 100%; text-align: center; }
+  }
+
   /* ─── CTA FINAL ─── */
   .cta-section {
     padding: 120px 80px;
@@ -994,9 +1133,9 @@
       <em>ganando hoy.</em>
     </h2>
     <div class="about-body">
-      <p>Iván Déniz no es un ex-entrenador que da clínicas. Es el coach que hoy dirige al equipo líder del basquetbol profesional en México, que compite en el escenario internacional más exigente del continente.</p>
-      <p>Lo que aprenderás en esta clínica no viene de libros ni de teoría: viene de la pizarra que ganó partidos <strong>esta misma temporada</strong>.</p>
-      <p>Mundo Basket cumple 29 años, y para celebrarlo eligió traer al mejor. Eso no es casualidad — es un criterio que se ha construido en casi tres décadas.</p>
+      <p>Iván Déniz es el coach que hoy dirige al equipo líder del basquetbol profesional en México, que compite en el escenario internacional más exigente del continente.</p>
+      <p>Lo que aprenderás en esta clínica no viene de libros ni de teoría: viene de la pizarra que está ganando partidos <strong>esta misma temporada</strong>.</p>
+      <p>Mundo Basket cumple 29 años, y para celebrarlo eligió traer al mejor.</p>
     </div>
   </div>
 
@@ -1078,17 +1217,17 @@
     <div class="pillar reveal">
       <div class="pillar-number">01</div>
       <h3 class="pillar-title">Vigencia real</h3>
-      <p class="pillar-body">Iván Déniz no da clínicas entre temporadas. Las da mientras gana. Cada concepto que comparterá está validado en la cancha profesional en tiempo real. Eso no tiene equivalente en ningún otro evento de formación en México.</p>
+      <p class="pillar-body">Cada concepto que comparterá está validado en la cancha profesional en tiempo real. Eso no tiene equivalente en ningún otro evento de formación en México.</p>
     </div>
     <div class="pillar reveal" style="transition-delay: 0.1s">
       <div class="pillar-number">02</div>
       <h3 class="pillar-title">Acceso exclusivo</h3>
-      <p class="pillar-body">La metodología de un equipo que compite en Champions Américas, disponible solo aquí, solo en Chiapas, solo en este momento. No existe otra manera de acceder a este nivel de conocimiento en la región.</p>
+      <p class="pillar-body">La metodología de un equipo que compite en Champions Américas trasladado a categorías inferiores, disponible solo aquí, solo en este momento. No existe otra manera de acceder a este nivel de conocimiento en la región.</p>
     </div>
     <div class="pillar reveal" style="transition-delay: 0.2s">
       <div class="pillar-number">03</div>
       <h3 class="pillar-title">Legado vivo</h3>
-      <p class="pillar-body">Mundo Basket lleva 29 años formando el juego en Chiapas. Esta clínica es la declaración más ambiciosa de su historia: no celebramos el pasado, invertimos en el futuro de cada entrenador que esté en esta sala.</p>
+      <p class="pillar-body">Mundo Basket lleva 29 años formando el juego en Chiapas. Esta clínica es una declaración ambiciosa de su historia: no celebramos el pasado, invertimos en el futuro del basquetbol en Chiapas</p>
     </div>
   </div>
 </section>
@@ -1114,7 +1253,7 @@
       29 años esperando<br>este momento.
     </h2>
     <p class="anniversary-body">
-      Dos décadas y media de construir basquetbol en Chiapas merecen una celebración a la altura. No un torneo de aniversario. No una cena. <strong>El mejor coach activo del país</strong>, compartiendo su sistema con los entrenadores que van a moldear la siguiente generación de jugadores chiapanecos.
+      Dos décadas y media de construir basquetbol en Chiapas merecen una celebración a la altura. <strong>El mejor coach activo del país</strong>, compartiendo su sistema con los entrenadores que van a moldear la siguiente generación de jugadores chiapanecos.
       <br><br>
       Ese es el legado de 29 años.
     </p>
@@ -1157,8 +1296,7 @@
 
       <div class="alumnos-cta">
         <div class="alumnos-cta-text">
-          ¿Eres alumno de MB? <strong>Tu participación está confirmada.</strong><br>
-          Habla con tu entrenador para los detalles del día.
+          ¿Eres alumno de MB? <strong>Tendrás la oportunidad de paticipar</strong><br>
         </div>
       </div>
     </div>
@@ -1220,6 +1358,64 @@
   </div>
 </section>
 
+<!-- ─── SOLICITUD DE ACCESO ─── -->
+<section class="solicitud" id="solicitud">
+  <div class="solicitud-inner">
+    <div class="solicitud-left reveal">
+      <p class="section-label">Acceso abierto</p>
+      <h2 class="solicitud-headline">
+        ¿No recibiste invitación<br>pero crees que este<br>espacio es <em>para ti?</em>
+      </h2>
+      <p class="solicitud-body">
+        Esta clínica es por invitación — pero dejamos un número limitado de lugares para coaches que, aunque no estén en nuestra lista, tengan el nivel y el compromiso que este espacio merece.
+        <br><br>
+        No es una inscripción abierta. Es una <strong>solicitud de consideración</strong>. El equipo de Mundo Basket revisa cada solicitud y te contacta directamente.
+      </p>
+      <div class="solicitud-nota">
+        Las solicitudes son revisadas por el equipo de Mundo Basket.<br>
+        Te contactaremos en un plazo de 48 horas para confirmar tu acceso.
+      </div>
+    </div>
+
+    <div class="solicitud-right reveal">
+      <form class="solicitud-form" id="solicitud-form" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+
+        <div class="form-field">
+          <label class="form-label" for="nombre">Nombre completo</label>
+          <input class="form-input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="academia">Academia o club</label>
+          <input class="form-input" type="text" id="academia" name="academia" placeholder="Nombre de tu academia o equipo" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="ciudad">Ciudad</label>
+          <input class="form-input" type="text" id="ciudad" name="ciudad" placeholder="¿De dónde vienes?" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="correo">Correo electrónico</label>
+          <input class="form-input" type="email" id="correo" name="correo" placeholder="Para contactarte" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="motivo">¿Por qué quieres asistir?</label>
+          <textarea class="form-input form-textarea" id="motivo" name="motivo" placeholder="Cuéntanos sobre tu trabajo como coach y por qué este espacio es importante para ti." required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Solicitar acceso</button>
+        <p class="form-disclaimer">Al enviar tu solicitud aceptas que el equipo de Mundo Basket te contacte por correo para confirmar o declinar tu participación.</p>
+      </form>
+
+      <div class="form-success" id="form-success">
+        Tu solicitud fue enviada. El equipo de Mundo Basket la revisará y te contactará en las próximas 48 horas.
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── CTA FINAL ─── -->
 <section class="cta-section" id="registro">
   <p class="cta-eyebrow reveal">17, 18 y 19 de Abril · Evento gratuito · Solo por invitación</p>
@@ -1229,7 +1425,7 @@
   <p class="cta-sub reveal">
     Sin costo. Sin venta abierta. El acceso es por invitación directa de Mundo Basket. <strong>Si recibes una invitación, no la dejes pasar.</strong>
   </p>
-  <a href="#alumnos" class="btn-large reveal">¿Eres alumno de MB? Entra aquí</a>
+  <a href="#alumnos" class="btn-large reveal">No te lo puedes perder</a>
 </section>
 
 <!-- ─── FOOTER ─── -->
@@ -1249,6 +1445,38 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Formulario de solicitud
+  const form = document.getElementById('solicitud-form');
+  const success = document.getElementById('form-success');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.form-submit');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          btn.textContent = 'Error al enviar — intenta de nuevo';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Error al enviar — intenta de nuevo';
+        btn.disabled = false;
+      }
+    });
+  }
 </script>
 </body>
 </html>
